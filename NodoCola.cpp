@@ -1,4 +1,6 @@
 #include "NodoCola.h"
+#include <Maleta.h>   
+
 NodoCola::NodoCola()
 {
 elemento='0';
