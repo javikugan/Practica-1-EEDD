@@ -1,5 +1,5 @@
 #include <iostream>
-struct Maleta
+struct TMaleta
 {
    char id[6];
    char dni[10]; //creo dni
