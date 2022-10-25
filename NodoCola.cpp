@@ -7,9 +7,9 @@ elemento='0';
 siguiente=NULL;
 //constructor por defecto
 }
-NodoCola::NodoCola(char e, NodoCola*sig )
+NodoCola::NodoCola(Maleta maleta, NodoCola*sig )
 {
-elemento = e;
+elemento = maleta;
 siguiente = sig;
 }
 NodoCola::~NodoCola()

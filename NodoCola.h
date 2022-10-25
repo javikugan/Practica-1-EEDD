@@ -7,9 +7,9 @@ class NodoCola
 friend class Cola;
 private:
 NodoCola *siguiente;
-char elemento;
+Maleta maleta;
 public:
 NodoCola();
-NodoCola(char e, NodoCola*sig = NULL);
+NodoCola(Maleta maleta, NodoCola*sig = NULL);
 ~NodoCola();
 };
