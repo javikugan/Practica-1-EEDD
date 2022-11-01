@@ -6,10 +6,10 @@
 #include <string.h>
 #include <time.h>
 
-int generar_n_aleatorio(int minimo, int maximo){
+int generar_numero_aleatorio(int minimo, int maximo){
     srand(time(NULL));
-    int aleat = minimo + rand()%maximo
-    return aleat
+    int aleat = minimo + rand()%maximo;
+    return aleat;
 }
 void cadena_aleatoria(int longitud, char *destino) {
     char muestra[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
