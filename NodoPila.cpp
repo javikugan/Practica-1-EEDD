@@ -1,6 +1,6 @@
 #include "NodoPila.h"
 #include <Maleta.h>   
-
+//hola
 NodoPila::NodoPila()
 {
 valor=0;

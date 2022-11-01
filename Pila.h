@@ -4,13 +4,13 @@
 class Pila
 {
 private:
-pnodo cima;
+    pnodo cima;
 public:
-Pila();
-~Pila();
-bool esVacia();
-void apilar(int v);
-void desapilar();
-int mostrar();
+    Pila();
+    ~Pila();
+    bool esVacia();
+    void apilar(int v);
+    void desapilar();
+    int mostrar();
 };
 #endif // PILA_H

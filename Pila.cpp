@@ -1,15 +1,16 @@
 #include "Pila.h"
 #include "NodoPila.h"
-#include "Maleta.h"
+#include "TMaleta.h"
 #include <iostream>
 
 using namespace std;
 
 Pila::Pila()
 {cima = NULL;}  
+
 Pila::~Pila()
-{ while(cima) desapilar();}
-bool Pila::esVacia()
+    { while(cima) desapilar();}
+    bool Pila::esVacia()
 { return cima == NULL; }
 void Pila::apilar(int v)
 { pnodo nuevo = new NodoPila(v,
@@ -33,18 +34,17 @@ cout << "Cima pila: "<< cima->valor<<endl;
 }
 return 0;
 }
-int main()
-{
-cout << "Creamos la pila Vacía" << endl;
-Pila p; p.mostrar();
-cout << "Apilo 0" << endl;
-p.apilar(0); p.mostrar();
-cout << "Apilo 1" << endl;
-p.apilar(1); p.mostrar();
-cout << "Apilo 2" << endl;
-p.apilar(2); p.mostrar();
-cout << "Desapilo" << endl;
-p.desapilar(); p.mostrar();
-p.~Pila(); //es innecesario, se va a llamar al destructor al salir de la ejecución
+int main(){
+    cout << "Creamos la pila Vacía" << endl;
+    Pila p; p.mostrar();
+    cout << "Apilo 0" << endl;
+    p.apilar(0); p.mostrar();
+    cout << "Apilo 1" << endl;
+    p.apilar(1); p.mostrar();
+    cout << "Apilo 2" << endl;
+    p.apilar(2); p.mostrar();
+    cout << "Desapilo" << endl;
+    p.desapilar(); p.mostrar();
+    p.~Pila(); //es innecesario, se va a llamar al destructor al salir de la ejecución
 return 0;
 }
