@@ -1,6 +1,6 @@
 #ifndef NODOPILA_H
 #define NODOPILA_H
-#include <Maleta.h>   
+#include "TMaleta.h"
 #include <iostream>
 
 class NodoPila{

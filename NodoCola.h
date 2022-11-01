@@ -1,6 +1,6 @@
 #ifndef NODOCOLA_H
 #define NODOCOLA_H
-#include <Maleta.h>   
+#include "TMaleta.h"
 #include <iostream>
 class NodoCola
 {

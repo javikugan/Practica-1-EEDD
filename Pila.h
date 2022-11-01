@@ -1,6 +1,8 @@
 #ifndef PILA_H
 #define PILA_H
 #include "NodoPila.h"
+#include "TMaleta.h"
+
 class Pila
 {
 private:
