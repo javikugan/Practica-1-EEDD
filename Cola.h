@@ -2,7 +2,6 @@
 #define COLA_H
 #include "NodoCola.h"
 #include "TMaleta.h"
-
 class Cola
 {
 private:

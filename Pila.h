@@ -2,7 +2,6 @@
 #define PILA_H
 #include "NodoPila.h"
 #include "TMaleta.h"
-
 class Pila
 {
 <<<<<<< Updated upstream
