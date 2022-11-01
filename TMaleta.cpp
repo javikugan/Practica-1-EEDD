@@ -18,18 +18,11 @@ void cadena_aleatoria(int longitud, char *destino) {
         destino[x] = muestra[indiceAleatorio];
     }
 }
-void dni_aleatorio(char *destino){
-    char numeros[] = "0123456789"
-    for (int x = 0; x < 8; x++) {
-        int indiceAleatorio = generar_numero_aleatorio(0, (int) strlen(muestra) - 1);
-        destino[x] = muestra[indiceAleatorio];
-    
 
-}
 void Id_Vuelo_aleatorio(char *destino) {
    std::string idVuelo[] = {"IB3412", "AC4832", "RY2781", "MS1032", "UA5389", "AE2334", "KL9768"};
     int indiceAleatorio = generar_numero_aleatorio(0, (int) strlen(idVuelo) - 1);
-    destino = idVuelo[indiceAleatorio];
+    destino[0] = idVuelo[indiceAleatorio];
     
 }
 
