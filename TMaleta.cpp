@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <time.h>
+#include <string> 
 using namespace std;
 
 
@@ -21,6 +22,14 @@ void cadena_aleatoria(int longitud, char *destino) {
         destino[x] = muestra[indiceAleatorio];
     }
 }
+std::string generar_dni_aleat(){
+    char letras[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    std::string dni;
+    dni = std::to_string(generar_numero_aleatorio(11111111,99999999));
+    dni.append(1,letras[generar_numero_aleatorio(0,26)]);
+    return dni;
+}
+
 
 std::string Id_Vuelo_aleatorio() {
     std::string idVuelo[] = {"IB3412", "AC4832", "RY2781", "MS1032", "UA5389", "AE2334", "KL9768"};
@@ -32,6 +41,7 @@ std::string Id_Vuelo_aleatorio() {
 
 int main(){
     
-    cout << Id_Vuelo_aleatorio();
+    cout << Id_Vuelo_aleatorio() << "\n";
+    cout << generar_dni_aleat();
     return 0;
 }
