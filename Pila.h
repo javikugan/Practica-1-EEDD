@@ -5,9 +5,16 @@
 
 class Pila
 {
+<<<<<<< Updated upstream
 private:
     pnodo cima;
 public:
+=======
+    private:
+    pnodo cima; 
+
+    public:
+>>>>>>> Stashed changes
     Pila();
     ~Pila();
     bool esVacia();

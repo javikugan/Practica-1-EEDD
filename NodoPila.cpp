@@ -15,4 +15,5 @@ siguiente = sig;
 NodoPila::~NodoPila()
 {
 //dtor
-}
+} TMaleta maleta; 
+ Nodopila * Sig
