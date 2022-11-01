@@ -1,16 +1,14 @@
-#include "Cola.h“ ……
+#include "Cola.h“ 
 #include "TMaleta.h"
-
 Cola::Cola(){
     primero = NULL; ultimo = NULL;
     longitud = 0;
 }
 Cola::~Cola() { }
 
-void Cola::encolar(TMaleta maleta){
+void Cola::encolar(char elemento){
     NodoCola *nuevo_nodo = new
-    
-NodoCola(maleta);
+NodoCola(elemento);
     if(es_vacia()){
         primero = nuevo_nodo;
         ultimo = nuevo_nodo;
@@ -23,7 +21,7 @@ NodoCola(maleta);
 
 char Cola::desencolar(){
     if(!es_vacia()){
-        char elemento = primero->maleta;
+        char elemento = primero->elemento;
         NodoCola *aux = primero;
         
         if((primero == ultimo) && (primero->siguiente == NULL)){
@@ -44,13 +42,13 @@ char Cola::desencolar(){
 
 char Cola::inicio(){
     if(!es_vacia()){
-        return primero->maleta;
+        return primero->elemento;
     }
 }
 
 char Cola::fin(){
     if(!es_vacia()){
-        return ultimo->maleta;
+        return ultimo->elemento;
         }
 }
 
@@ -62,14 +60,18 @@ bool Cola::es_vacia(){
     return ((primero == NULL) && (ultimo == NULL));
 }
 
-void Cola::mostrarCola(){
-    NodoCola *aux = primero;
-    if (es_vacia()) {
-        cout<<"Cola Vacía: "<<endl;
-        }else {
-        cout<<"Datos de la Cola: "<<endl;
+void Cola::mostrarCola()
+//No es correcto, la cola solo puede verse mostrando
+el primero y desencolando, se implementa para
+comprobar
+código facilmente.
+{
+NodoCola *aux = primero;
+if (es_vacia()) {cout<<"Cola Vacía: "<<endl;}
+else {
+cout<<"Datos de la Cola: "<<endl;
 while (aux){
-cout << aux->maleta<<endl;
+cout << aux->elemento<<endl;
 aux = aux->siguiente;
 }
 }
