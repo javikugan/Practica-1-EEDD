@@ -1,15 +1,15 @@
 #include "NodoCola.h"
-#include <Maleta.h>   
+#include "TMaleta.h"
 
 NodoCola::NodoCola()
 {
-elemento='0';
+maleta='0';
 siguiente=NULL;
 //constructor por defecto
 }
-NodoCola::NodoCola(Maleta maleta, NodoCola*sig )
+NodoCola::NodoCola(TMaleta mmaleta, NodoCola*sig )
 {
-elemento = maleta;
+maleta = mmaleta;
 siguiente = sig;
 }
 NodoCola::~NodoCola()
