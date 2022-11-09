@@ -1,3 +1,5 @@
+#ifndef TMaleta
+#define TMaleta
 #include <iostream>
 struct TMaleta
 {
@@ -8,8 +10,4 @@ struct TMaleta
    int localizador;
    char nombre[30];
    int hora; 
-   
-
-    
-    /* data */
 };
