@@ -6,9 +6,9 @@ Cola::Cola(){
 }
 Cola::~Cola() { }
 
-void Cola::encolar(char elemento){
+void Cola::encolar(TMaleta maleta){
     NodoCola *nuevo_nodo = new
-NodoCola(elemento);
+NodoCola(maleta);
     if(es_vacia()){
         primero = nuevo_nodo;
         ultimo = nuevo_nodo;
@@ -19,9 +19,9 @@ NodoCola(elemento);
     longitud++;
 }
 
-char Cola::desencolar(){
+TMaleta Cola::desencolar(){
     if(!es_vacia()){
-        char elemento = primero->elemento;
+        TMaleta = primero->maleta;
         NodoCola *aux = primero;
         
         if((primero == ultimo) && (primero->siguiente == NULL)){
@@ -36,19 +36,19 @@ char Cola::desencolar(){
                 delete(aux);
                 }
     longitud--;
-    return elemento;
+    return maleta;
     }
 }
 
-char Cola::inicio(){
+TMaleta Cola::inicio(){
     if(!es_vacia()){
-        return primero->elemento;
+        return primero->maleta;
     }
 }
 
-char Cola::fin(){
+TMaleta Cola::fin(){
     if(!es_vacia()){
-        return ultimo->elemento;
+        return ultimo->maleta;
         }
 }
 

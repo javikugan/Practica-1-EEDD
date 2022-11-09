@@ -21,6 +21,14 @@ void cadena_aleatoria(int longitud, char *destino) {
         destino[x] = muestra[indiceAleatorio];
     }
 }
+int dni_aleat(){
+    int dninum;
+    std::string dni;
+    dninum = generar_numero_aleatorio(10000000,99999999);
+    dni = int.TryParse(dninum);
+
+}
+
 
 std::string Id_Vuelo_aleatorio() {
     std::string idVuelo[] = {"IB3412", "AC4832", "RY2781", "MS1032", "UA5389", "AE2334", "KL9768"};
@@ -28,10 +36,23 @@ std::string Id_Vuelo_aleatorio() {
     std::string destino = idVuelo[indiceAleatorio];
     return destino;
 }
+TMaleta::TMaleta(char idf, char dnif, char destinof, char origenf, int localizadorf, char nombref, int horaf){
+    id = idf;
+    dni= dnif;
+    destino = destinof;
+    origen = origenf;
+    localizador = localizadorf;
+    nombre = nombref;
+    hora = horaf;
+}
 
-
-int main(){
-    
-    cout << Id_Vuelo_aleatorio();
-    return 0;
+TMaleta crear_Maleta_rand(){
+    id = ;
+    dni= dnif;
+    destino = destinof;
+    origen = origenf;
+    localizador = localizadorf;
+    nombre = nombref;
+    hora = horaf;
+}
 }
