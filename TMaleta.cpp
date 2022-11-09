@@ -34,7 +34,7 @@ char dni_aleat(){
 }
 char generar_origen(){
     char origen;
-    std::string muestra[]= {"MADRID", "MÁLAGA", "COPENHAGUE", "LONDRES-STANSTED", "WASHINGTON DULLES", "VIRGINIA", "CHANTILLY"}
+    std::string muestra[]= {"MADRID", "MÁLAGA", "COPENHAGUE", "LONDRES-STANSTED", "WASHINGTON DULLES", "VIRGINIA", "CHANTILLY"};
     int origen_n = generar_numero_aleatorio(0,6);
     std::string origen = muestra[origen_n];
     return origen; 
@@ -42,8 +42,8 @@ char generar_origen(){
 
 char generar_destino(){
     char destino;
-    std::string muestra[]= {"ARGENTINA", "CHILE", "ALEMANIA", "BUENOS AIRES", "ISLANDIA", "ALBANIA", "BÉLGICA"}
-    int destino_n = generar_numero_aleatorio(0,6)
+    std::string muestra[]= {"ARGENTINA", "CHILE","ALEMANIA", "BUENOS AIRES", "ISLANDIA", "ALBANIA", "BÉLGICA"};
+    int destino_n = generar_numero_aleatorio(0,6);
     std::string destino = muestra[destino_n];
     return destino; 
 
@@ -51,15 +51,11 @@ char generar_destino(){
 
 int generar_hora_salida(){
     char hora_salida;
-    std::string muestra[]= {"2147", "2354", "1234"}
+    std::string muestra[]= {"2147", "2354", "1234"};
     std:: string hora_salida = muestra[generar_numero_aleatorio(0,2)];
     return hora_salida;
 
 }
-
-
-
-
 std::string Id_Vuelo_aleatorio() {
     std::string idVuelo[] = {"IB3412", "AC4832", "RY2781", "MS1032", "UA5389", "AE2334", "KL9768"};
     int indiceAleatorio = generar_numero_aleatorio(0, 7);
