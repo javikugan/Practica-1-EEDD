@@ -5,14 +5,21 @@
 
 class NodoPila{
 
+friend class Cola;
+
     private:
-        int valor;
         NodoPila *siguiente;
-        friend class Pila;
+        TMaleta* mm;
+
     public:
-    NodoPila();
-    NodoPila(int v, NodoPila *sig = NULL);
-    ~NodoPila();
-    };
-typedef NodoPila *pnodo;
-#endif // NODOPILA_H
+
+        NodoPila();
+            NodoPila(TMaleta* mm, NodoPila *sig = NULL){
+            maleta = mm;
+            siguiente = sig;
+        };
+        ~NodoCola();
+
+};
+
+ 
