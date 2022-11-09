@@ -1,4 +1,3 @@
-
 #include "TMaleta.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,13 +21,43 @@ void cadena_aleatoria(int longitud, char *destino) {
         destino[x] = muestra[indiceAleatorio];
     }
 }
-std::string generar_dni_aleat(){
-    char letras[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    std::string dni;
-    dni = std::to_string(generar_numero_aleatorio(11111111,99999999));
-    dni.append(1,letras[generar_numero_aleatorio(0,26)]);
+char dni_aleat(){
+    int dninum;
+    char dni;
+    std::string muestra[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    dninum = generar_numero_aleatorio(10000000,99999999);
+    dni = int.TryParse(dninum);
+    int indiceAleatorio = generar_numero_aleatorio(0, (int) strlen(muestra) - 1);
+    dni[8] = muestra[indiceAleatorio];
     return dni;
+
 }
+char generar_origen(){
+    char origen;
+    std::string muestra[]= {"MADRID", "MÁLAGA", "COPENHAGUE", "LONDRES-STANSTED", "WASHINGTON DULLES", "VIRGINIA", "CHANTILLY"}
+    int origen_n = generar_numero_aleatorio(0,6);
+    std::string origen = muestra[origen_n];
+    return origen; 
+}
+
+char generar_destino(){
+    char destino;
+    std::string muestra[]= {"ARGENTINA", "CHILE", "ALEMANIA", "BUENOS AIRES", "ISLANDIA", "ALBANIA", "BÉLGICA"}
+    int destino_n = generar_numero_aleatorio(0,6)
+    std::string destino = muestra[destino_n];
+    return destino; 
+
+}
+
+int generar_hora_salida(){
+    char hora_salida;
+    std::string muestra[]= {"2147", "2354", "1234"}
+    std:: string hora_salida = muestra[generar_numero_aleatorio(0,2)];
+    return hora_salida;
+
+}
+
+
 
 
 std::string Id_Vuelo_aleatorio() {
@@ -40,8 +69,13 @@ std::string Id_Vuelo_aleatorio() {
 
 
 int main(){
-    
-    cout << Id_Vuelo_aleatorio() << "\n";
-    cout << generar_dni_aleat();
+    std::string IdVuelo = Id_Vuelo_aleatorio();
+    cout << IdVuelo;
+    cout << "Imprime los destinos generados de forma aleatoria";
+    cout << generar_hora_salida();
     return 0;
+
 }
+
+
+
