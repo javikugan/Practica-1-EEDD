@@ -25,9 +25,7 @@ std::string dni_aleat(){
     std::string dni;
     char numeros[]= "0123456789";
     char muestra[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-   
-   
-    for (int x = 0; x < 8; x++) {
+    for (int x = 0; x < 8; x++){
         int indiceAleatorio1 = generar_numero_aleatorio(0, (int) strlen(numeros) - 1);
         dni + numeros[indiceAleatorio1];
         cout << dni;
@@ -67,6 +65,7 @@ std::string generar_localizador(){
         localizador + numeros[indiceAleatorio];
         
     }
+    return localizador;
 }
 
 std::string Id_Vuelo_aleatorio() {
