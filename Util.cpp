@@ -82,6 +82,26 @@ TMaleta generar_maleta(){
     maleta.localizador = generar_localizador();
 }
 
+Cola* generarNMaletas(int numMaletas) {
+	
+	Cola* cola = new Cola();
+	TMaleta maleta;
+
+	for (int i = 0; i <= numMaleta- 1; i++) {
+		maleta = randomMaleta(i);
+		if (i == 0) {
+            maleta.NIF = "09064004A";
+		}
+		cola->encolar(maleta);
+		imprimirMaleta(maleta);
+	}
+	return cola;
+}
+
+void imprimirMaleta(TMaleta maleta) {
+
+	cout << "|" + maleta.dni + "|" + maleta.hora + "|" + maleta.destino + "|" + maleta.origen+ "| " + maleta.localizador+ " |" << endl;
+}
 
 int main(){
     cout << Id_Vuelo_aleatorio() << "\n";
@@ -90,6 +110,7 @@ int main(){
     cout << generar_destino() << "\n";
     cout << generar_hora_salida() << "\n";
     cout << generar_localizador() << "\n"; 
+    cout << generar_
     
     return 0;
 
