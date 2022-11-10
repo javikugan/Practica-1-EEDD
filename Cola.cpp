@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Util.h"
+#include "Nodo.h"
+#include "TMaleta.h"
 Cola::Cola(){
     primero = NULL; ultimo = NULL;
 }
@@ -39,65 +41,12 @@ int Cola::length()
 	}
 	return contador;
 }
-/*bool Cola::buscarMaleta(string idNIF) {
-	bool encontrado = false;
-	Nodo* nodo = primero;
 
-	while (nodo != nullptr) {
-		if (nodo->paquete.id == idNIF || nodo->paquete.NIF == idNIF) {
-			encontrado = true;
-		}
-		nodo = nodo->next;
-	}
-	return encontrado;
-}
-void Cola::eliminarMaleta(std::string idNIF) {
-	int longitud = length();
-	for (int i = 0; i <= longitud - 1; i++) {
-		if ((firstNodo->paquete.id == idNIF || firstNodo->paquete.NIF == idNIF)) {
-			pop();
-		}
-		else {
-			push(pop());
-		}
-	}
-}*/
 Nodo* Cola::first() {
 	return primero;
 }
 
-/*void Cola::encolar(TMaleta maleta){
-    Nodo *nuevo_nodo = new
-NodoCola(maleta);
-    if(es_vacia()){
-        primero = nuevo_nodo;
-        ultimo = nuevo_nodo;
-    }else{
-        ultimo->siguiente = nuevo_nodo;
-        ultimo = nuevo_nodo;
-    }
-    longitud++;
-}
 
-TMaleta Cola::desencolar(){
-    if(!es_vacia()){
-        TMaleta maleta = primero->maleta;
-        Nodo*aux = primero;
-        
-        if((primero == ultimo) && (primero->siguiente == NULL)){
-            primero = NULL;
-            ultimo = NULL;
-            aux->siguiente = NULL;
-            delete(aux);
-            
-            }else{
-                primero = primero->siguiente;
-                aux->siguiente = NULL;
-                delete(aux);
-                }
-    return maleta;
-    }
-}*/
 
 TMaleta Cola::inicio(){
     
@@ -119,12 +68,11 @@ bool Cola::es_vacia(){
 void Cola::mostrarCola()
 {
 Nodo *aux = primero;
-if (es_vacia()) {std::cout<<"Cola Vacía: "<<std::endl;}
-else {
-std::cout<<"Datos de la Cola: "<<std::endl;
-while (aux){
-Util::imprimirMaleta(aux ->maleta);
-aux = aux->siguiente;
-}
+if (es_vacia()) {std::cout<<"Cola Vacía: "<<std::endl;
+	}else{
+	std::cout<<"Datos de la Cola: "<<std::endl;
+	while (aux){
+		aux = aux->siguiente;
+		}
 }
 }
