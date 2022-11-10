@@ -8,43 +8,57 @@ using namespace std;
 Pila::Pila()
 {cima = NULL;}  
 
-Pila::~Pila()
-    { while(cima) desapilar();}
-    bool Pila::esVacia()
-{ return cima == NULL; }
-void Pila::apilar(int v)
-{ pnodo nuevo = new NodoPila(v,
-cima);
-//comienzo de la pila nevo nodo
-cima = nuevo;
+Pila::~Pila(){
+    while(cima) desapilar();
+    }
+
+bool Pila::esVacia(){ 
+    return cima == NULL; 
+    }
+
+void Pila::apilar(TMaleta maleta){
+    
+    Nodo* nodo = new Nodo();
+    nodo -> paquete = paquete;
+    if (cima == 0) {
+		cima = nodo;
+	}
+	else {
+		nodo->next = cima;
+		cima = nodo;
+	}
 }
-void Pila::desapilar()
-{ pnodo nodo; //puntero aux para manipular el nodo
-if(cima)
-nodo = cima;
-cima = nodo->siguiente;
-delete nodo;
+TMaleta Pila::desapilar(){
+    if(cima){
+        Nodo* nodo = cima;
+        cima = nodo-> siguiente;
+        delete nodo;
+        return nodo->paquete;
+    }else{
+        cout << "Pila Vacia"
+    }
+    
 }
-int Pila::mostrar()
-{ if(esVacia()) {
-cout << "Pila vacia"<<endl;
+int Pila::largo()
+{
+	int contador = 0;
+	Nodo* nodo = cima;
+
+	while (nodo != nullptr) {
+		nodo = nodo->next;
+		contador++;
+	}
+return contador;
 }
-else{
-cout << "Cima pila: "<< cima->valor<<endl;
+void Pila::imprimirPila() {
+
+	Nodo* nodo = cima;
+
+	while (nodo != nullptr) {
+		imprimirPaquete(nodo->maleta);
+		nodo = nodo->siguiente;
+	}
 }
-return 0;
-}
-int main(){
-    cout << "Creamos la pila Vacía" << endl;
-    Pila p; p.mostrar();
-    cout << "Apilo 0" << endl;
-    p.apilar(0); p.mostrar();
-    cout << "Apilo 1" << endl;
-    p.apilar(1); p.mostrar();
-    cout << "Apilo 2" << endl;
-    p.apilar(2); p.mostrar();
-    cout << "Desapilo" << endl;
-    p.desapilar(); p.mostrar();
-    p.~Pila(); //es innecesario, se va a llamar al destructor al salir de la ejecución
-return 0;
+Paquete Pila::cima() {
+	return cima->paquete;
 }

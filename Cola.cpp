@@ -65,7 +65,7 @@ Nodo* Cola::topNodo() {
 }
 
 void Cola::encolar(TMaleta maleta){
-    NodoCola *nuevo_nodo = new
+    Nodo *nuevo_nodo = new
 NodoCola(maleta);
     if(es_vacia()){
         primero = nuevo_nodo;
@@ -80,7 +80,7 @@ NodoCola(maleta);
 TMaleta Cola::desencolar(){
     if(!es_vacia()){
         TMaleta = primero->maleta;
-        NodoCola *aux = primero;
+        Nodo*aux = primero;
         
         if((primero == ultimo) && (primero->siguiente == NULL)){
             primero = NULL;
@@ -124,7 +124,7 @@ el primero y desencolando, se implementa para
 comprobar
 código facilmente.
 {
-NodoCola *aux = primero;
+Nodo *aux = primero;
 if (es_vacia()) {cout<<"Cola Vacía: "<<endl;}
 else {
 cout<<"Datos de la Cola: "<<endl;
