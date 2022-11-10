@@ -1,6 +1,5 @@
-#ifndef NODOCOLA_H
-#define NODOCOLA_H
-#include <TMaleta.h>   
+
+#include "TMaleta.h"   
 #include <iostream>
 
 typedef struct Nodo{

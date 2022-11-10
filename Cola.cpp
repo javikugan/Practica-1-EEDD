@@ -8,38 +8,38 @@ Cola::~Cola() { }
 void Cola::encolar(TMaleta maleta)
 {
 	Nodo* nodo = new Nodo();
-	nodo->paquete = paquete;
-	if (lastNodo == nullptr) {
-		lastNodo = nodo;
-		firstNodo = nodo;
+	nodo->maleta = maleta;
+	if (primero == nullptr) {
+		ultimo = nodo;
+		primero = nodo;
 	}
 	else {
-		lastNodo->next = nodo;
-		nodo->previous = lastNodo;
-		lastNodo = nodo;
+		ultimo->siguiente = nodo;
+		nodo->anterior = lastNodo;
+		ultimo = nodo;
 	}
 }
 Paquete Cola::pop()
 {
-	Nodo* nodo = firstNodo;
-	firstNodo = firstNodo->next;
+	Nodo* nodo = primero;
+	primero = primero->siguiente;
 
-	return nodo->paquete;
+	return nodo->maleta;
 }
 int Cola::length()
 {
 	int contador = 0;
-	Nodo* nodo = firstNodo;
+	Nodo* nodo = primero;
 
 	while (nodo != nullptr) {
-		nodo = nodo->next;
+		nodo = nodo->siguiente;
 		contador++;
 	}
 	return contador;
 }
 bool Cola::buscarPaquete(string idNIF) {
 	bool encontrado = false;
-	Nodo* nodo = firstNodo;
+	Nodo* nodo = primero;
 
 	while (nodo != nullptr) {
 		if (nodo->paquete.id == idNIF || nodo->paquete.NIF == idNIF) {
