@@ -108,7 +108,6 @@ Cola* generarNMaletas(int numMaletas) {
 	//genera n paquetes de manera aleatoria y los mete en una cola
 	Cola* cola = new Cola();
 	TMaleta maleta;
-
 	for (int i = 0; i <= numMaletas - 1; i++) {
 		maleta = generar_maleta();
 		cola->encolar(maleta);
