@@ -6,4 +6,4 @@ typedef struct Nodo{
     TMaleta maleta;
     Nodo* siguiente = nullptr; 
     Nodo* anterior = nullptr;
-};      
+}Nodo;        

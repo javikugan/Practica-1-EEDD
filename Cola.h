@@ -11,9 +11,13 @@ class Cola{
         Cola(); ~Cola();
         void encolar(TMaleta maleta);
         TMaleta desencolar();
-        char inicio();
-        char fin();
+        TMaleta fin();
+        TMaleta inicio();
+        
         bool es_vacia();
-        Nodo* topNodo();
+        Nodo* first();
+        int length();
+        void mostrarCola();
+
     };
 #endif 

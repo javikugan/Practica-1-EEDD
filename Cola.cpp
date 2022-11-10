@@ -1,8 +1,10 @@
-#include "Cola.h“ 
+#include "Cola.h"
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include "TMaleta.h"
 Cola::Cola(){
     primero = NULL; ultimo = NULL;
-    longitud = 0;
 }
 Cola::~Cola() { }
 void Cola::encolar(TMaleta maleta)
@@ -15,11 +17,11 @@ void Cola::encolar(TMaleta maleta)
 	}
 	else {
 		ultimo->siguiente = nodo;
-		nodo->anterior = lastNodo;
+		nodo->anterior = ultimo;
 		ultimo = nodo;
 	}
 }
-Paquete Cola::pop()
+TMaleta Cola::desencolar()
 {
 	Nodo* nodo = primero;
 	primero = primero->siguiente;
@@ -37,7 +39,7 @@ int Cola::length()
 	}
 	return contador;
 }
-bool Cola::buscarPaquete(string idNIF) {
+/*bool Cola::buscarMaleta(string idNIF) {
 	bool encontrado = false;
 	Nodo* nodo = primero;
 
@@ -49,7 +51,7 @@ bool Cola::buscarPaquete(string idNIF) {
 	}
 	return encontrado;
 }
-void Cola::eliminarMaleta(string idNIF) {
+void Cola::eliminarMaleta(std::string idNIF) {
 	int longitud = length();
 	for (int i = 0; i <= longitud - 1; i++) {
 		if ((firstNodo->paquete.id == idNIF || firstNodo->paquete.NIF == idNIF)) {
@@ -59,12 +61,12 @@ void Cola::eliminarMaleta(string idNIF) {
 			push(pop());
 		}
 	}
-}
-Nodo* Cola::topNodo() {
-	return firstNodo;
+}*/
+Nodo* Cola::first() {
+	return primero;
 }
 
-void Cola::encolar(TMaleta maleta){
+/*void Cola::encolar(TMaleta maleta){
     Nodo *nuevo_nodo = new
 NodoCola(maleta);
     if(es_vacia()){
@@ -79,7 +81,7 @@ NodoCola(maleta);
 
 TMaleta Cola::desencolar(){
     if(!es_vacia()){
-        TMaleta = primero->maleta;
+        TMaleta maleta = primero->maleta;
         Nodo*aux = primero;
         
         if((primero == ultimo) && (primero->siguiente == NULL)){
@@ -93,43 +95,35 @@ TMaleta Cola::desencolar(){
                 aux->siguiente = NULL;
                 delete(aux);
                 }
-    longitud--;
     return maleta;
     }
-}
+}*/
 
 TMaleta Cola::inicio(){
-    if(!es_vacia()){
+    
         return primero->maleta;
-    }
+    
 }
 
 TMaleta Cola::fin(){
-    if(!es_vacia()){
-        return ultimo->maleta;
-        }
+	return ultimo->maleta;
+    
 }
 
-int Cola::get_longitud(){
-    return longitud;
-    }
+
 
 bool Cola::es_vacia(){
     return ((primero == NULL) && (ultimo == NULL));
 }
 
 void Cola::mostrarCola()
-//No es correcto, la cola solo puede verse mostrando
-el primero y desencolando, se implementa para
-comprobar
-código facilmente.
 {
 Nodo *aux = primero;
-if (es_vacia()) {cout<<"Cola Vacía: "<<endl;}
+if (es_vacia()) {std::cout<<"Cola Vacía: "<<std::endl;}
 else {
-cout<<"Datos de la Cola: "<<endl;
+std::cout<<"Datos de la Cola: "<<std::endl;
 while (aux){
-cout << aux->elemento<<endl;
+std::cout<< aux->maleta<<std::endl;
 aux = aux->siguiente;
 }
 }
