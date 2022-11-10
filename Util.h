@@ -1,13 +1,13 @@
-#define N1 100
-#define N2 15
-#define N3 10
+
+#ifndef UTIL
+#define UTIL
 #include <iostream> 
 #include <string>
 #include "Nodo.h"
 #include "TMaleta.h"
 #include "Cola.h"
 
-namespace Util{
+class Util{
     
     void imprimirMaleta(TMaleta maleta);
     std::string generarID(int n);
@@ -22,3 +22,4 @@ namespace Util{
     
 
 };
+#endif
