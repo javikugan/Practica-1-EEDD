@@ -1,18 +1,15 @@
-#pragma once
+#define N1 100
+#define N2 15
+#define N3 10
+#include <iostream> 
 #include <string>
-#include <coordenadas.h>
-#include "furgoneta.h"
 #include "Cola.h"
 
 namespace Util{
+    
 
     std::string generarID(int n);
-    
-    Coordenadas generarCoodenada();
-    bool generarUrgencia();
     std::string generarDni();
-    void organizarPaquetes();
-    void organizarZona(Furgoneta* f, Cola* c, Paquete* p, int* estadisticoPaquetes, int* estadisticoFurgos);
     int generar_numero_aleatorio(int minimo, int maximo);
     void cadena_aleatoria(int longitud, char *destino);
     std::string dni_aleat();
