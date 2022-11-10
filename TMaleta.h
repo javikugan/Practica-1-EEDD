@@ -1,3 +1,5 @@
+#ifndef NODOCOLA_H
+#define NODOCOLA_H
 #include <iostream>
 struct TMaleta
 {
