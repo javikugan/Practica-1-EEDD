@@ -1,4 +1,5 @@
 #include "TMaleta.h"
+#include "Cola.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -65,8 +66,9 @@ std::string generar_localizador(){
     for (int x=0; x < 4; x++){
         int indiceAleatorio= generar_numero_aleatorio(0, (int) strlen(numeros)-1);
         localizador + numeros[indiceAleatorio];
-        
+    
     }
+    return localizador;
 }
 
 std::string Id_Vuelo_aleatorio() {
@@ -80,10 +82,11 @@ std::string generar_nombres(){
      
 
     std::string nombres[] = {"Antonio", "David", "Juan", "Francisco", "Daniel", "José", "Manuel", "Teresa", "Celia", "María", "Lucía", "Rocío", "Ascen", "Loren", "Álvaro", "Lourdes", "Laura", "Sofía", "Mario", "Javier", "Marco", "Lara", "Luisa", "Luis", "Fernando", "Domingo", "África", "Andrea", "Sergio", "Adrián", "Pablo", "Sandra", "Marta", "Valeria", "Paula", "Luna", "Diana", "Noelia", "Marcos", "Iván", "Jaime", "Diego", "Isabel", "Blanca", "Ana"};
-    std::string apellido[] = {"Pascual", "Rodríguez", "Polanco", "Núñez", "González", "Aldea", "Manso", "Pérez", "Cebrecos", "Moglovejo", "Fernández", "Roma", "Ortiz", "Viñas", "Vaca", "Jarillo", "Cembellín", "Alberti", "Martínez", "Sánchez", "García", "Gómez", "López", "Martín", "Cuesta", "Mogolló", "Simón", "Peña", "Velasco", "Jurado", "Loro", "Blanco", "Honrado", "Gil", "de Cos", "Márquez", "Díaz", "Palomino", "Tesifonte", "Luzdivino", "Dombina", "Calleja", "Ruiz", "Oristila", "Bonifacio"}
+    std::string apellido[] = {"Pascual", "Rodríguez", "Polanco", "Núñez", "González", "Aldea", "Manso", "Pérez", "Cebrecos", "Moglovejo", "Fernández", "Roma", "Ortiz", "Viñas", "Vaca", "Jarillo", "Cembellín", "Alberti", "Martínez", "Sánchez", "García", "Gómez", "López", "Martín", "Cuesta", "Mogolló", "Simón", "Peña", "Velasco", "Jurado", "Loro", "Blanco", "Honrado", "Gil", "de Cos", "Márquez", "Díaz", "Palomino", "Tesifonte", "Luzdivino", "Dombina", "Calleja", "Ruiz", "Oristila", "Bonifacio"};
     int indiceAleatorio4 = generar_numero_aleatorio(0,44);
     int indiceAleatorio5 = generar_numero_aleatorio(0,44);
-    nombre = nombre + " " + nombres[] + apellido[indiceAleatorio] + apellido[indiceAleatorio5]; 
+    nombre = nombre + " " + nombres[indiceAleatorio4] + apellido[indiceAleatorio4] + apellido[indiceAleatorio5]; 
+    return nombre;
 
 }
 TMaleta generar_maleta(){
@@ -93,6 +96,8 @@ TMaleta generar_maleta(){
     maleta.destino = generar_destino();
     maleta.origen = generar_origen();
     maleta.localizador = generar_localizador();
+    maleta.nombre = generar_nombres();
+    return maleta;
 }
 void imprimirMaleta(TMaleta maleta) {
 

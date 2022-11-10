@@ -1,11 +1,11 @@
 #ifndef COLA_H
 #define COLA_H
-#include "NodoCola.h"
+#include "Nodo.h"
 #include "TMaleta.h"
 class Cola{
     private:
-        NodoCola* primero;
-        NodoCola* ultimo;
+        Nodo* primero;
+        Nodo* ultimo;
 
     public:
         Cola(); ~Cola();

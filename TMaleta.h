@@ -1,6 +1,5 @@
 #include <iostream>
-struct TMaleta
-{
+struct TMaleta{
    std::string id;
    std::string dni; //creo dni
    std::string destino; 
