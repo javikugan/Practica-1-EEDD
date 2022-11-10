@@ -26,9 +26,9 @@ std::string dni_aleat(){
     char numeros[]= "0123456789";
     char muestra[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for (int x = 0; x < 8; x++){
-        int indiceAleatorio1 = generar_numero_aleatorio(0, (int) strlen(numeros) - 1);
-        dni + numeros[indiceAleatorio1];
-        cout << dni;
+        int indiceAleatorio1 = generar_numero_aleatorio(0, 10);
+        dni = dni + numeros[indiceAleatorio1];
+
         }
         
   
@@ -59,10 +59,10 @@ std::string generar_hora_salida(){
 }
 std::string generar_localizador(){
     char numeros[]= "0123456789";
-    std::string localizador;
+    std::string localizador = "";
     for (int x=0; x < 4; x++){
-        int indiceAleatorio= generar_numero_aleatorio(0, (int) strlen(numeros)-1);
-        localizador + numeros[indiceAleatorio];
+        localizador = localizador + std::to_string(generar_numero_aleatorio(0,8));
+
         
     }
     return localizador;
@@ -85,6 +85,7 @@ TMaleta generar_maleta(){
 
 
 int main(){
+    
     cout << Id_Vuelo_aleatorio() << "\n";
     cout << dni_aleat() << "\n";
     cout << generar_origen() << "\n";
