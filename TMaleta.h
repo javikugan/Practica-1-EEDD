@@ -1,5 +1,3 @@
-#ifndef NODOCOLA_H
-#define NODOCOLA_H
 #include <iostream>
 struct TMaleta
 {
@@ -8,6 +6,7 @@ struct TMaleta
    std::string destino; 
    std::string origen;
    std::string localizador; //4 digitos
+   std::string nombre;
    std::string hora; 
    /* data */
 };
