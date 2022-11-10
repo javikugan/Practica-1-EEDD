@@ -20,6 +20,7 @@ class Cola{
         bool es_vacia();
         Nodo* first();
         int length();
+        Cola* generarNMaletas(int numMaletas);
         void mostrarCola();
 
     };
