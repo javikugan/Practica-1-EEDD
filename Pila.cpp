@@ -54,7 +54,9 @@ void Pila::imprimirPila() {
 	Nodo* nodo = cima;
 
 	while (nodo != nullptr) {
-		Util::imprimirMaleta(nodo->maleta);
+		TMaleta maleta = nodo->maleta;
+			cout << "|" + maleta.id + "|" + maleta.localizador + "|" + maleta.nombre + "|" + maleta.destino + "|" + maleta.hora + "|" + maleta.nombre + "|";
+
 		nodo = nodo->siguiente;
 	}
 }
