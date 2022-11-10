@@ -74,8 +74,21 @@ if (es_vacia()) {std::cout<<"Cola Vacía: "<<std::endl;
 	while (aux){
 		aux = aux->siguiente;
 		}
+	}
 }
+Cola* generarNMaletas(int numMaletas) {
+	//genera n paquetes de manera aleatoria y los mete en una cola
+	Cola* cola = new Cola();
+	TMaleta maleta;
+	for (int i = 0; i <= numMaletas - 1; i++) {
+		maleta = Util::generar_maleta();
+		cola->encolar(maleta);
+		Util::imprimirMaleta(maleta);
+	}
+	return cola;
 }
+
+
 int main(){
 
 };
