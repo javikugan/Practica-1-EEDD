@@ -3,23 +3,8 @@
 #define N3 10
 #include <iostream> 
 #include <string>
-#include "Cola.h"
-struct TMaleta
-{
-   std::string id;
-   std::string dni; 
-   std::string destino; 
-   std::string origen;
-   std::string localizador; //4 digitos
-   std::string nombre;
-   std::string hora; 
-   /* data */
-};
-struct Nodo{
-    TMaleta maleta;
-    Nodo* siguiente = nullptr; 
-    Nodo* anterior = nullptr;
-};        
+#include "Nodo.h"
+#include "TMaleta.h"
 
 namespace Util{
     
@@ -33,6 +18,7 @@ namespace Util{
     std::string generar_destino();
     std::string generar_hora_salida();
     std::string Id_Vuelo_aleatorio();
+    void imprimirMaleta(TMaleta maleta);
     
 
 };

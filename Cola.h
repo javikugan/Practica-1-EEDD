@@ -1,10 +1,13 @@
 #ifndef COLA_H
 #define COLA_H
 #include "Util.h"
+#include "TMaleta.h"
+#include "Nodo.h"
 
 
 class Cola{
     private:
+        TMaleta maleta;
         Nodo* primero;
         Nodo* ultimo;
 
@@ -14,7 +17,6 @@ class Cola{
         TMaleta desencolar();
         TMaleta fin();
         TMaleta inicio();
-        
         bool es_vacia();
         Nodo* first();
         int length();

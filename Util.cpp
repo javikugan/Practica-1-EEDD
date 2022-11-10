@@ -7,6 +7,8 @@
 #include <time.h>
 #include <string> 
 #include "Util.h"
+#include "Nodo.h"
+#include "TMaleta.h"
 using namespace std;
 
 

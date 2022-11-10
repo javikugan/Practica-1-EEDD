@@ -6,7 +6,6 @@ class Pila{
 private:  
     Nodo* cima;
 public:
-    void desapilar(TMaleta maleta);
     TMaleta desapilar();
 
     Pila();

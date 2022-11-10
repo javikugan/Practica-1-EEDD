@@ -60,6 +60,6 @@ void Pila::imprimirPila() {
 		nodo = nodo->siguiente;
 	}
 }
-Paquete Pila::cima() {
+TMaleta Pila::cima() {
 	return cima->paquete;
 }
