@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TMaleta.h"
+#include "Util.h"
+#include "Util.cpp"
 Cola::Cola(){
     primero = NULL; ultimo = NULL;
 }
@@ -123,7 +125,7 @@ if (es_vacia()) {std::cout<<"Cola Vacía: "<<std::endl;}
 else {
 std::cout<<"Datos de la Cola: "<<std::endl;
 while (aux){
-std::cout<< aux->maleta<<std::endl;
+imprimirMaleta(aux ->maleta);
 aux = aux->siguiente;
 }
 }
