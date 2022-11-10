@@ -58,7 +58,7 @@ std::string generar_hora_salida(){
     return hora_salida;
 
 }
-std::string generara_localizador(){
+std::string generar_localizador(){
     char numeros[]= "0123456789";
     for (int x=0; x < 4; x++){
         int indiceAleatorio= generar_numero_aleatorio(0, (int) strlen(numeros)-1);
@@ -79,7 +79,7 @@ TMaleta generar_maleta(){
     maleta.hora = generar_hora_salida();
     maleta.destino = generar_destino();
     maleta.origen = generar_origen();
-    maleta.localizador = generar_numero_aleatorio(1000)
+    maleta.localizador = generar_localizador();
 }
 
 
@@ -89,7 +89,7 @@ int main(){
     cout << generar_origen() << "\n";
     cout << generar_destino() << "\n";
     cout << generar_hora_salida() << "\n";
-    cout << generara_localizador() << "\n"; 
+    cout << generar_localizador() << "\n"; 
     
     return 0;
 
