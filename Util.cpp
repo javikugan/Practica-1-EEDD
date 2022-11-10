@@ -82,6 +82,22 @@ TMaleta generar_maleta(){
     maleta.origen = generar_origen();
     maleta.localizador = generar_localizador();
 }
+void imprimirMaleta(TMaleta maleta) {
+
+	cout << "|" + maleta.id + "|" + maleta.localizador + "|" + maleta.nombre + "|" + maleta.destino + "|" + maleta.hora + "|" + maleta.nombre + "|" << endl;
+}
+Cola* generarNMaletas(int numMaletas) {
+	//genera n paquetes de manera aleatoria y los mete en una cola
+	Cola* cola = new Cola();
+	TMaleta maleta;
+
+	for (int i = 0; i <= numMaletas - 1; i++) {
+		maleta = generar_maleta();
+		cola->encolar(maleta);
+		imprimirMaleta(maleta);
+	}
+	return cola;
+}
 
 
 int main(){
