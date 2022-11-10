@@ -1,6 +1,12 @@
+#ifndef NODOCOLA_H
+#define NODOCOLA_H
+#include <TMaleta.h>   
 #include <iostream>
-struct TMaleta
-{
+class TMaleta{
+    friend class TMaleta; 
+    private: 
+    
+
    char id[6];
    char dni[10]; //creo dni
    char destino[3]; 

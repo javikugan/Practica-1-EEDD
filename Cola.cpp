@@ -5,6 +5,64 @@ Cola::Cola(){
     longitud = 0;
 }
 Cola::~Cola() { }
+void Cola::encolar(TMaleta maleta)
+{
+	Nodo* nodo = new Nodo();
+	nodo->paquete = paquete;
+	if (lastNodo == nullptr) {
+		lastNodo = nodo;
+		firstNodo = nodo;
+	}
+	else {
+		lastNodo->next = nodo;
+		nodo->previous = lastNodo;
+		lastNodo = nodo;
+	}
+}
+Paquete Cola::pop()
+{
+	Nodo* nodo = firstNodo;
+	firstNodo = firstNodo->next;
+
+	return nodo->paquete;
+}
+int Cola::length()
+{
+	int contador = 0;
+	Nodo* nodo = firstNodo;
+
+	while (nodo != nullptr) {
+		nodo = nodo->next;
+		contador++;
+	}
+	return contador;
+}
+bool Cola::buscarPaquete(string idNIF) {
+	bool encontrado = false;
+	Nodo* nodo = firstNodo;
+
+	while (nodo != nullptr) {
+		if (nodo->paquete.id == idNIF || nodo->paquete.NIF == idNIF) {
+			encontrado = true;
+		}
+		nodo = nodo->next;
+	}
+	return encontrado;
+}
+void Cola::eliminarMaleta(string idNIF) {
+	int longitud = length();
+	for (int i = 0; i <= longitud - 1; i++) {
+		if ((firstNodo->paquete.id == idNIF || firstNodo->paquete.NIF == idNIF)) {
+			pop();
+		}
+		else {
+			push(pop());
+		}
+	}
+}
+Nodo* Cola::topNodo() {
+	return firstNodo;
+}
 
 void Cola::encolar(TMaleta maleta){
     NodoCola *nuevo_nodo = new
