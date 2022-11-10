@@ -25,10 +25,12 @@ std::string dni_aleat(){
     std::string dni;
     char numeros[]= "0123456789";
     char muestra[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    for (int x = 0; x < 8; x++){
-        int indiceAleatorio1 = generar_numero_aleatorio(0, 10);
-        dni = dni + numeros[indiceAleatorio1];
-
+   
+   
+    for (int x = 0; x < 8; x++) {
+        int indiceAleatorio1 = generar_numero_aleatorio(0, (int) strlen(numeros) - 1);
+        dni + numeros[indiceAleatorio1];
+        cout << dni;
         }
         
   
@@ -59,20 +61,30 @@ std::string generar_hora_salida(){
 }
 std::string generar_localizador(){
     char numeros[]= "0123456789";
-    std::string localizador = "";
+    std::string localizador;
     for (int x=0; x < 4; x++){
-        localizador = localizador + std::to_string(generar_numero_aleatorio(0,8));
-
+        int indiceAleatorio= generar_numero_aleatorio(0, (int) strlen(numeros)-1);
+        localizador + numeros[indiceAleatorio];
         
     }
-    return localizador;
 }
 
 std::string Id_Vuelo_aleatorio() {
     std::string idVuelo[] = {"IB3412", "AC4832", "RY2781", "MS1032", "UA5389", "AE2334", "KL9768"};
-    int indiceAleatorio = generar_numero_aleatorio(0, 7);
-    std::string destino = idVuelo[indiceAleatorio];
+    int indiceAleatorio3 = generar_numero_aleatorio(0, 7);
+    std::string destino = idVuelo[indiceAleatorio3];
     return destino;
+}
+std::string generar_nombres(){
+    std::string nombre= "";
+     
+
+    std::string nombres[] = {"Antonio", "David", "Juan", "Francisco", "Daniel", "José", "Manuel", "Teresa", "Celia", "María", "Lucía", "Rocío", "Ascen", "Loren", "Álvaro", "Lourdes", "Laura", "Sofía", "Mario", "Javier", "Marco", "Lara", "Luisa", "Luis", "Fernando", "Domingo", "África", "Andrea", "Sergio", "Adrián", "Pablo", "Sandra", "Marta", "Valeria", "Paula", "Luna", "Diana", "Noelia", "Marcos", "Iván", "Jaime", "Diego", "Isabel", "Blanca", "Ana"};
+    std::string apellido[] = {"Pascual", "Rodríguez", "Polanco", "Núñez", "González", "Aldea", "Manso", "Pérez", "Cebrecos", "Moglovejo", "Fernández", "Roma", "Ortiz", "Viñas", "Vaca", "Jarillo", "Cembellín", "Alberti", "Martínez", "Sánchez", "García", "Gómez", "López", "Martín", "Cuesta", "Mogolló", "Simón", "Peña", "Velasco", "Jurado", "Loro", "Blanco", "Honrado", "Gil", "de Cos", "Márquez", "Díaz", "Palomino", "Tesifonte", "Luzdivino", "Dombina", "Calleja", "Ruiz", "Oristila", "Bonifacio"}
+    int indiceAleatorio4 = generar_numero_aleatorio(0,44);
+    int indiceAleatorio5 = generar_numero_aleatorio(0,44);
+    nombre = nombre + " " + nombres[] + apellido[indiceAleatorio] + apellido[indiceAleatorio5]; 
+
 }
 TMaleta generar_maleta(){
     TMaleta maleta;
@@ -84,15 +96,15 @@ TMaleta generar_maleta(){
 }
 
 
+
 int main(){
-    
     cout << Id_Vuelo_aleatorio() << "\n";
     cout << dni_aleat() << "\n";
     cout << generar_origen() << "\n";
     cout << generar_destino() << "\n";
     cout << generar_hora_salida() << "\n";
     cout << generar_localizador() << "\n"; 
-    
+    cout << generar_nombres() << "\n";
     return 0;
 
 }
