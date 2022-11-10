@@ -5,6 +5,7 @@
 #include <string>
 #include "Nodo.h"
 #include "TMaleta.h"
+#include "Cola.h"
 
 namespace Util{
     

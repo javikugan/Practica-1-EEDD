@@ -76,3 +76,6 @@ if (es_vacia()) {std::cout<<"Cola Vacía: "<<std::endl;
 		}
 }
 }
+int main(){
+
+};
