@@ -1,7 +1,8 @@
 #ifndef COLA_H
 #define COLA_H
-#include "Nodo.h"
-#include "TMaleta.h"
+#include "Util.h"
+
+
 class Cola{
     private:
         Nodo* primero;

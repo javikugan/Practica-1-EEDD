@@ -1,7 +1,7 @@
 #ifndef PILA_H
 #define PILA_H
-#include "Nodo.h"
-#include "TMaleta.h"
+#include "Util.h"
+
 class Pila{
 private:  
     Nodo* cima;

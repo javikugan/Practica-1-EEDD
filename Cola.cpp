@@ -2,7 +2,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include "TMaleta.h"
 #include "Util.h"
 #include "Util.cpp"
 Cola::Cola(){

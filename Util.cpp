@@ -1,4 +1,3 @@
-#include "TMaleta.h"
 #include "Cola.h"
 #include <stdio.h>
 #include <stdlib.h>
