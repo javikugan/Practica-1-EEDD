@@ -5,16 +5,16 @@
 class Cola
 {
 private:
-NodoCola * primero;
-NodoCola * ultimo;
-int longitud;
+    NodoCola * primero;
+    NodoCola * ultimo;
+    int longitud;
 public:
-Cola(); ~Cola();
-void encolar(char);
-char inicio();
-char fin();
-char desencolar();
-bool es_vacia();
+    Cola(); ~Cola();
+    void encolar(char);
+    char inicio();
+    char fin();
+    char desencolar();
+    bool es_vacia();
 void mostrarCola(); //No es correcto, se implementa para ver que está creada correctamente
 };
 #endif // COLA_
