@@ -29,12 +29,12 @@ std::string dni_aleat(){
    
     for (int x = 0; x < 8; x++) {
         int indiceAleatorio1 = generar_numero_aleatorio(0, (int) strlen(numeros) - 1);
-        dni + numeros[indiceAleatorio1]
+        dni + numeros[indiceAleatorio1];
         }
         
   
     int indiceAleatorio2 = generar_numero_aleatorio(0, (int) strlen(muestra) - 1);
-    return to_string(dni) + muestra[indiceAleatorio2];
+    return dni + muestra[indiceAleatorio2];
 
 }
 std::string generar_origen(){
