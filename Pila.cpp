@@ -20,24 +20,22 @@ bool Pila::esVacia(){
 void Pila::apilar(TMaleta maleta){
     
     Nodo* nodo = new Nodo();
-    nodo -> paquete = paquete;
+    nodo -> maleta = maleta;
     if (cima == 0) {
 		cima = nodo;
 	}
 	else {
-		nodo->next = cima;
+		nodo->siguiente = cima;
 		cima = nodo;
 	}
 }
 TMaleta Pila::desapilar(){
-    if(cima){
         Nodo* nodo = cima;
         cima = nodo-> siguiente;
         delete nodo;
-        return nodo->paquete;
-    }else{
-        cout << "Pila Vacia"
-    }
+        return nodo->maleta;
+    
+    
     
 }
 int Pila::largo()
@@ -46,7 +44,7 @@ int Pila::largo()
 	Nodo* nodo = cima;
 
 	while (nodo != nullptr) {
-		nodo = nodo->next;
+		nodo = nodo->siguiente;
 		contador++;
 	}
 return contador;
@@ -56,10 +54,14 @@ void Pila::imprimirPila() {
 	Nodo* nodo = cima;
 
 	while (nodo != nullptr) {
-		imprimirPaquete(nodo->maleta);
+		Util::imprimirMaleta(nodo->maleta);
 		nodo = nodo->siguiente;
 	}
 }
-TMaleta Pila::cima() {
-	return cima->paquete;
+TMaleta Pila::primero() {
+	return cima->maleta;
 }
+
+int main(){
+	return 0;
+};

@@ -9,7 +9,7 @@
 
 namespace Util{
     
-
+    void imprimirMaleta(TMaleta maleta);
     std::string generarID(int n);
     std::string generarDni();
     int generar_numero_aleatorio(int minimo, int maximo);
@@ -19,7 +19,6 @@ namespace Util{
     std::string generar_destino();
     std::string generar_hora_salida();
     std::string Id_Vuelo_aleatorio();
-    void imprimirMaleta(TMaleta maleta);
     
 
 };
